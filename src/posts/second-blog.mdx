@@ -1,0 +1,27 @@
+---
+date: 2021-08-18
+title: my second blog
+description: this is my second ever blog.  i'm cool
+---
+
+import { Link, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+export const query = graphql`
+  query SmashburgerQuery {
+    file(name: { eq: "smashburger" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+  }
+`;
+
+# oh damn
+
+<GatsbyImage
+  image={getImage(props.data.file)}
+  alt=" a smashburger on a plate yumm"
+/>
+
+this is better than the previous one
